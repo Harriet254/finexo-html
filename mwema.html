@@ -1,0 +1,86 @@
+```html
+<form id="vehicle-insurance-form">
+  <h2>Vehicle Insurance Application</h2>
+  <label for="vehicle-type">Vehicle Type:</label>
+  <select id="vehicle-type" name="vehicle-type">
+    <option value="car">Car</option>
+    <option value="truck">Truck</option>
+    <option value="motorcycle">Motorcycle</option>
+  </select>
+  <br><br>
+  <label for="vehicle-make">Vehicle Make:</label>
+  <input type="text" id="vehicle-make" name="vehicle-make">
+  <br><br>
+  <label for="vehicle-model">Vehicle Model:</label>
+  <input type="text" id="vehicle-model" name="vehicle-model">
+  <br><br>
+  <label for="vehicle-year">Vehicle Year:</label>
+  <input type="number" id="vehicle-year" name="vehicle-year">
+  <br><br>
+  <label for="driver-name">Driver Name:</label>
+  <input type="text" id="driver-name" name="driver-name">
+  <br><br>
+  <label for="driver-age">Driver Age:</label>
+  <input type="number" id="driver-age" name="driver-age">
+  <br><br>
+  <label for="coverage-type">Coverage Type:</label>
+  <select id="coverage-type" name="coverage-type">
+    <option value="liability">Liability</option>
+    <option value="collision">Collision</option>
+    <option value="comprehensive">Comprehensive</option>
+  </select>
+  <br><br>
+  <button id="submit-btn">Submit</button>
+</form>
+
+<style>
+  #vehicle-insurance-form {
+    width: 50%;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input, select {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    width: 100%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+</style
+<script>
+  const form = document.getElementById('vehicle-insurance-form');
+  const submitBtn = document.getElementById('submit-btn');
+  
+  submitBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    console.log(data);
+    // Send data to server or perform other actions
+  });
+</script>
+```
